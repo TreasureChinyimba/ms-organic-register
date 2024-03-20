@@ -1,0 +1,27 @@
+<form (ngSubmit)="submitForm()">
+    <label>First Name:</label>
+    <input type="text" [(ngModel)]="firstName" name="firstName" required>
+  
+    <label>Last Name:</label>
+    <input type="text" [(ngModel)]="lastName" name="lastName" required>
+  
+    <label>Email:</label>
+    <input type="email" [(ngModel)]="email" name="email" required>
+  
+    <label>Phone Number:</label>
+    <input type="tel" [(ngModel)]="phoneNumber" name="phoneNumber" required>
+  
+    <label>Image 1:</label>
+    <input type="file" (change)="handleImageUpload($event, 1)" accept="image/*" required>
+  
+    <!-- Add similar fields for Image 2 and Image 3 -->
+  
+    <label>Introductory Video:</label>
+    <input type="file" (change)="handleVideoUpload($event)" accept="video/*" required>
+  
+    <label>Brief Info About Yourself:</label>
+    <textarea [(ngModel)]="bio" name="bio" required></textarea>
+  
+    <button type="submit">Submit</button>
+  </form>
+  
